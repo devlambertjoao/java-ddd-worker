@@ -1,4 +1,4 @@
-package com.coffee.worker.domain.service.impl;
+package com.coffee.worker.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
