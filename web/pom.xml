@@ -7,6 +7,9 @@
   </parent>
   <artifactId>web</artifactId>
   <name>web</name>
+  <properties>
+    <start-class>com.coffee.worker.web.WorkerApplication</start-class>
+	</properties>
   <dependencies>
 	  <dependency>
 		  <groupId>com.coffee.worker</groupId>
@@ -14,4 +17,12 @@
 		  <version>0.0.1-SNAPSHOT</version>
 	  </dependency>
   </dependencies>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+  </build>
 </project>

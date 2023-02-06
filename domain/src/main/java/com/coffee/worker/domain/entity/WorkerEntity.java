@@ -6,6 +6,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
 
 @Entity 
 public class WorkerEntity {
@@ -14,12 +17,18 @@ public class WorkerEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+  @NotNull
+  @Size(min = 11, max = 11)
 	private Long documentNumber;
 	
+  @Size(min = 3, max = 50)
 	private String name;
 	
+  @NotNull
+  @Past
 	private LocalDate birthday;
 	
+  @NotNull
 	private double hourlyWage;
 
 	public Long getId() {
